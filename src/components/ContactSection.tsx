@@ -49,6 +49,10 @@ export default function ContactSection() {
       });
       if (!res.ok) throw new Error("Failed");
       setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setForm({ name: "", email: "", projectType: "", currency: form.currency, budget: "", message: "" });
+      }, 4000);
     } catch {
       alert("Something went wrong. Please email us directly at hello@altivussolvo.com.");
     } finally {
@@ -150,7 +154,7 @@ export default function ContactSection() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="p-8 sm:p-10 rounded-2xl card-glass text-center"
+                className="p-8 sm:p-10 rounded-2xl card-glass text-center min-h-[480px] flex flex-col items-center justify-center"
               >
                 <motion.div
                   initial={{ scale: 0 }}
@@ -160,7 +164,7 @@ export default function ContactSection() {
                 >
                   <CheckCircle size={28} className="text-emerald-400" />
                 </motion.div>
-                <h3 className="font-heading text-xl font-semibold text-[#0F172A] mb-2">Message Sent!</h3>
+                <h3 className="font-heading text-xl font-semibold text-[#0F172A] dark:text-[#F1F5F9] mb-2">Message Sent!</h3>
                 <p className="text-slate-400 dark:text-slate-500 text-sm max-w-sm mx-auto">Thank you — we&apos;ll be in touch within 24 hours.</p>
               </motion.div>
             ) : (
