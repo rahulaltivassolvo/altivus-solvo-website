@@ -41,9 +41,19 @@ export default function ContactSection() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1600));
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+    } catch {
+      alert("Something went wrong. Please email us directly at hello@altivussolvo.com.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const [copied, setCopied] = useState(false);
