@@ -27,7 +27,7 @@ export async function onRequest(context) {
     },
     body: JSON.stringify({
       from: "Altivus Solvo <onboarding@resend.dev>",
-      to: ["hello@altivussolvo.com"],
+      to: ["rahul.altivassolvo@gmail.com"],
       subject: `New inquiry from ${body.name || body.email || "someone"}`,
       html,
     }),
