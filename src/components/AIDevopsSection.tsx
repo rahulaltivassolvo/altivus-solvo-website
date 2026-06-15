@@ -74,7 +74,7 @@ export default function AIDevopsSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#6B21A8]" />
             Intelligence & Infrastructure
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#0F172A] mb-4 text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#0F172A] dark:text-[#F1F5F9] mb-4 text-balance">
             AI and DevOps, <span className="gradient-text">in harmony</span>.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 leading-relaxed">

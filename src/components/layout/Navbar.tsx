@@ -67,7 +67,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollTo(e, link.href)}
-                className="nav-link px-4 py-2 rounded-lg text-sm text-[#64748B] hover:text-[#6B21A8] transition-colors duration-200"
+                className="nav-link px-4 py-2 rounded-lg text-sm text-[#64748B] dark:text-slate-400 hover:text-[#6B21A8] dark:hover:text-[#00D4FF] transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -83,7 +83,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-slate-500 hover:text-[#6B21A8] hover:bg-[rgba(107,33,168,0.06)] transition-colors"
+            className="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#6B21A8] dark:hover:text-[#00D4FF] hover:bg-[rgba(107,33,168,0.06)] dark:hover:bg-[rgba(0,212,255,0.08)] transition-colors"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}

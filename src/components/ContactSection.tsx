@@ -284,7 +284,7 @@ function SelectField({
         >
           <option value="" disabled className="text-slate-400">{placeholder}</option>
           {options.map((opt) => (
-            <option key={opt} value={opt} className="text-[#0F172A]">{opt}</option>
+            <option key={opt} value={opt} className="text-[#0F172A] dark:text-[#F1F5F9]">{opt}</option>
           ))}
         </select>
         <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />

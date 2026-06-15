@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const steps = [
   ...[
-    { text: "# Shipping enterprise software", color: "text-slate-500 italic", delay: 0.0 },
+    { text: "# Shipping enterprise software", color: "text-slate-500 italic dark:text-slate-400", delay: 0.0 },
   ],
   ...(() => {
     const chars = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴"];
